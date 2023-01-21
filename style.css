@@ -125,6 +125,7 @@ padding:12px 0;
     margin: 0 3px;
 }
 .contactform form div input{
+    background-color: white;
     width: 26vw;
     border-radius: 5px;
     margin: 6px 0 0;
