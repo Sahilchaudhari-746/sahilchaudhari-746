@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+.devpic img{
+    border-radius:50%;
+    margin-left: 12px;
+    border: 1rem solid #eeeeee;
+}
+.name{
+    font-size: 1rem;
+}
+.sidebar{
+    border: 1px solid grey;
+    position: absolute;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    /* background-color: red; */
+     width: 250px; 
+    font-family: Arial, Helvetica, sans-serif;
+    height: 150vh;
+    transition:transform 0.3s ease-in ;
+}
+.sidebar nav{
+
+    padding: 45px;
+}
+.sidebar nav li{
+    list-style: none;
+    font-size: 20px;
+    padding: 23px 0;
+}
+.sidebar nav li
+{
+    border: 2px solid grey;
+    border-radius: 12px;
+    padding: 5px;
+    text-align: center;
+    margin: 15px;
+    background-color: #9a6060;
+}
+.sidebar nav li a{
+    background-color: #9a6060;
+ text-decoration: none;
+ color: white;
+ transition:transform 0.3s ease-in;
+}
+.main{
+    /* background-color: yellow; */
+    width: 87vw;
+}
+.container
+{
+    display: flex;
+}
+.info{
+    /* background-color: rgb(234, 34, 237); */
+    height: 45vh;
+    width: 80vw;
+    margin:110px auto;
+    height: 58vh;
+    display: flex;
+    justify-content: space-around
+}
+/* .devpic img{
+} */
+.devinfo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.hello{
+    font-size: 48px;
+}
+.name{
+    font-size: 35px;
+    /* font-weight: bold; */
+}
+.about{
+    font-size: 23px;
+}
+.moreabout{
+    margin: 23px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.buttons button{
+    margin-top: 34px;
+    padding: 9px 14px;
+    border-radius:22px ;
+    color: white;
+    background-color: rgb(109, 100, 240);
+    font-weight: bold;
+    font-size: 12px;
+    margin: 3px 3px;
+    cursor: pointer;
+}
+.buttons button:hover{
+background-color: white;
+color: black;
+}
+/* contact html page */
+.contactform{
+    padding: 0 65px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px 88px;
+}
+.contactform h1{
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+text-align: center;
+padding:12px 0;
+}
+.contactform form div
+{
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+#emailHelp{
+    font-size: 12px;
+    color: rgb(103, 103, 150);
+    margin: 0 3px;
+}
+.contactform form div input{
+    width: 26vw;
+    border-radius: 5px;
+    margin: 6px 0 0;
+    padding: 3px 0 0;
+}
+#form-check{
+    display: flex;
+    flex-direction: row;
+}
+#form-check input{
+    width: 29px;
+}
+/* Blog html page */
+.blogitem{
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.blogitem p{
+    font-family:'Times New Roman', Times, serif;
+}
+.blog-container{
+    margin: 10px 88px;
+}
+.blog-container h1{
+    margin: 23px;
+ text-align: center;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.buttons-b button{
+    margin-top: 20px;
+    padding: 4px 10px;
+    border-radius:22px ;
+    color: white;
+    background-color: rgb(109, 100, 240);
+    font-weight: bold;
+    font-size: 10px;
+    margin: 0 2px;
+    cursor: pointer;
+}
+.buttons-b button:hover{
+    background-color: white;
+    color: black;
+    }
+ p{
+    font-family:'Times New Roman', Times, serif; }
+    .intro{
+        margin: 10px 88px;
+    }
+.intro h2{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 12px;
+}
+.intro p{
+font-family: 'Times New Roman', Times, serif;
+margin: 12px;
+}
+.skillcontainer
+{
+    padding: 12px;
+    
+}
+.skillitem
+{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.skill
+{
+    width: 250px;
+    height: 7px;
+    background-color: red;
+    border: 2px solid rgb(250, 242, 242);
+}
+.hundred{
+    width: 265px;
+    background-color: blueviolet;
+}
+.fifty
+{
+    width: 125px;
+    background-color: aqua;
+}
+.t5{
+    width:75px;
+    background-color: yellow;
+}
+.sidebargo{
+    transform: translate(-443px,0px);
+    position: absolute;
+   }
+.hamburger{
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    left: 10px;
+    margin-top: 10px;
+}
+.cross
+{
+ margin-left: 180px;
+}
+.ham{
+    margin-left: 10px;
+}
+
+@media (max-width:1124px)
+{
+    .devpic img 
+    {
+        width: 15rem;
+      /* display: none; */
+    } 
+   /* .sidebar{
+    transform: translate(-443px,0px);
+    position: absolute;
+   } */
+   .intro,.blog-container,.contactform{
+    margin: 50px 8px;
+   }
+}
+ 
+.center
+{
+    text-align: center;
+    font-size: 10px;
+    margin-top: 5px;
+    background-color: bisque;
+}
+.socialmedia{  
+margin-top: -51px;
+
+margin-left: 20px;
+align-items: center;
+display: flex;   
+flex-direction: row;
+}
+.eachsocial{
+    padding: 40px;
+}
+.contactbor{
+    margin:50px 100px;
+}
