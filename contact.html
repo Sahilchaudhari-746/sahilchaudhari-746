@@ -14,9 +14,10 @@
     <div class="sidebar sidebargo">
       <!-- sahil  -->
       <div class="devpic">
-        <img src="WhatsApp Image 2023-01-02 at 11.png" alt="sahil chaudhari"style="width: 10rem; margin-top:42px; margin-left:12px">
+        <img src="WhatsApp Image 2023-01-02 at 11.png" alt="sahil chaudhari"
+          style="width: 10rem; margin-top:42px; margin-left:12px">
         <div class="name" style="font-size: 26px;text-align: center;">Sahil Chaudhari Developer</div>
-    </div>
+      </div>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -31,48 +32,71 @@
       <div class="hamburger">
         <img class="ham" src="menu.png" alt="" width="23px">
         <img class="cross" src="cross.png" alt="" width="23px">
-    </div>
+      </div>
       <div class="contactform">
         <h1>Contact me for work/ general quries</h1>
-        <form>
+        <form name="submit-to-google-sheet">
           <div class="mb-3">
             <label for="clientphone" class="form-label">Name</label>
-            <input type="Name" class="form-control" id="exampleInputPassword1">
+            <input type="text" name="Name">
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="clientemail" aria-describedby="emailHelp">
+            <input type="email" name="email" class="form-control" id="clientemail" aria-describedby="emailHelp">
             <div id="emailHelp" class="form-text">We'll not share your email with anyone else.</div>
           </div>
           <div class="mb-3">
             <label for="clientphone" class="form-label">phone no</label>
-            <input type="clientphone" class="form-control" id="exampleInputPassword1">
+            <input type="text" name="clientphone" class="form-control" id="exampleInputPassword1">
           </div>
           <div class="mb-3">
             <label for="clientphone" class="form-label">Enquiry</label>
-            <input type="Enquiry" class="form-control" id="exampleInputPassword1">
+            <input type="Enquiry" name="Enquiry" class="form-control" id="exampleInputPassword1">
           </div>
           <div class="mb-3" id="form-check">
             <input type="checkbox" class="form-check-input" id="is client">
             <label class="form-check-label" for="exampleCheck1">I want you to work on project with me</label>
           </div>
           <div class="buttons">
-          <button type="submit" style="width: 80px;">Submit</button>
+            <button type="submit" style="width: 80px;">Submit</button>
           </div>
         </form>
+        <span id="msg"></span>
       </div>
-      <div class="contactbor" style="margin-left: 52px;">----------------Or U Contact from these below apps  also----------------</div>
+      <div class="contactbor" style="margin-left: 52px;">----------------Or U Contact from these below apps
+        also----------------</div>
       <div class="socialmedia">
         <a href="https://www.instagram.com/sahilchaudhari_sc_746/?hl=en" target="_main" class="eachsocial" style="
         padding-right: 11px;
-    "><img src="instagram.png" alt="instagram" height="45"></a><a href="https://www.linkedin.com/in/sahil-chaudhari-5567a3254/" target="_main"><img src="linkdin.png"alt="linkdin" height="45"></a>
-      <a class="btn" href="mailto:sahilchaudhari2412@gmail.com" target="_main"><img src="email.png"alt="instagram" height="45"></a>
-      <a href="" target="_main"><img src="facebook.png"alt="instagram" height="45"></a>
-      
-    </div>
+    "><img src="instagram.png" alt="instagram" height="45"></a><a
+          href="https://www.linkedin.com/in/sahil-chaudhari-5567a3254/" target="_main"><img src="linkdin.png"
+            alt="linkdin" height="45"></a>
+        <a class="btn" href="mailto:sahilchaudhari2412@gmail.com" target="_main"><img src="email.png" alt="instagram"
+            height="45"></a>
+        <a href="" target="_main"><img src="facebook.png" alt="instagram" height="45"></a>
+
+      </div>
     </div>
   </div>
-<script src="script.js"></script>
-</body>
+  <script src="script.js"></script>
+  
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxthiF3hpA3PMwtUhe_fFKmc0knrU1pbL9PUVy71o_1GrqNChmsFfLB3_1xv07IP3GtUA/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg= document.getElementById("msg")
+    
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {msg.innerHTML="Message sent succesfully"
+    setTimeout(function() {
+      msg.innerHTML=""
+    }, 5000)
+  form.reset();
+  })
+      .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 
+</body>
 </html>
