@@ -269,3 +269,10 @@ flex-direction: row;
 .contactbor{
     margin:50px 100px;
 }
+#msg
+{
+    color: #61b752;
+    margin-top: -15px;
+    display: block;
+}
+
