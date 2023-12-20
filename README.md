@@ -1,4 +1,4 @@
-                                                   *__Hi 👋, I'm Sahil Chaudhari__*
+                                                   Hi 👋, I'm Sahil Chaudhari
         An CSE student with a passion for coding and problem-solving. Proficient in HTML, CSS, JavaScript, C, C++ and Python.
           Seeking opportunities to enhance my skills, gain handsome experience, and make a positive impact in tech industry
 
